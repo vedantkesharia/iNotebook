@@ -1,5 +1,6 @@
 import NoteContext from "./noteContext";
 import { useState } from "react";
+
 const NoteState = (props) => {
   const host = "http://localhost:5000"
   const notesInitial = []
@@ -33,12 +34,12 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({title,description,tag})
     });
-    const json = response.json();
+    const json =  response.json();
 
     console.log("Adding a new note")
     const note = {
-      "_id": "63ea5cff4da82e557f8cfe562",
-      "user": "63ea2f51b4e89b868cbb6c731",
+      "_id": "63f38ebbbff1535660662298",
+      "user": "63ea2f51b4e89b868cbb6c90",
       "title": title,
       "description": description,
       "tag": tag,

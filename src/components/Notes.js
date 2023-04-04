@@ -6,6 +6,7 @@ const Notes = () => {
     const context = useContext(noteContext);
     const {notes,getNotes} = context;
     useEffect(() => {
+      console.log("hey");
       getNotes()
     }, [])
     
