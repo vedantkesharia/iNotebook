@@ -10,6 +10,8 @@ const Notes = (props) => {
   const { notes, getNotes,editNote } = context;
   useEffect(() => {
     if(localStorage.getItem('token')){
+     // navigate("/home");
+     console.log(localStorage.getItem('token'));
       getNotes();
     }
     else{
@@ -79,9 +81,9 @@ const Notes = (props) => {
       <div className="row my-3">
         <h2>Your Notes</h2>
         <div className="container mx-1">
-        {notes.length===0 && 'No notes to display'}
+        {notes?.length===0 && 'No notes to display'}
         </div>
-        {notes.map((note) => {
+        {notes?.map((note) => {
           return <Noteitem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
         })}
       </div>

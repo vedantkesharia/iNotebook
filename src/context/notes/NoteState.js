@@ -13,8 +13,8 @@ const NoteState = (props) => {
       const response = await fetch(`${host}/api/notes/fetchallnotes`, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json',
-          "auth-token": localStorage.getItem('token')
+          "Content-Type": "application/json",
+          "auth-token": localStorage.getItem("token")
         }
       });
       const json = await response.json()
