@@ -2,7 +2,7 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 //import { useContext } from "react";
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://evernote-oqbj.onrender.com"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
 
